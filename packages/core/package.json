@@ -1,0 +1,34 @@
+{
+  "name": "@wartech/feature-toggle-core",
+  "version": "1.0.0",
+  "description": "Feature toggle/flag library",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://gitlab.warungpintar.co/wartech/feature-toggle.git",
+  "author": "wartech",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "concurrently yarn:build:*",
+    "build:lib": "./scripts/build.js",
+    "build:types": "tsc && tsconfig-replace-paths --project tsconfig.json",
+    "dev": "./scripts/watch.js",
+    "test": "concurrently yarn:test:*",
+    "test:types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@warungpintar/warpin-scripts": "*",
+    "esbuild": "^0.12.6",
+    "react": "16.4",
+    "tsconfig-paths": "^3.9.0",
+    "tsconfig-replace-paths": "^0.0.5",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.9",
+    "tiny-emitter": "^2.1.0"
+  }
+}

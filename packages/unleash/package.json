@@ -1,0 +1,26 @@
+{
+  "name": "@wartech/feature-toggle-adapter-unleash",
+  "version": "1.0.0",
+  "description": "Unleash feature flag service adapter",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": "https://gitlab.warungpintar.co/wartech/feature-toggle.git",
+  "author": "wartech",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "./scripts/build.js",
+    "dev": "./scripts/watch.js",
+    "test": "concurrently yarn:test:*",
+    "test:type": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@wartech/feature-toggle-core": "1.0.0",
+    "react-unleash-flags": "^1.3.0",
+    "tiny-emitter": "^2.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "typescript": "^4.3.2"
+  }
+}
