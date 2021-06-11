@@ -7,7 +7,8 @@
   "author": "wartech",
   "workspaces": {
     "packages": [
-      "packages/*"
+      "packages/*",
+      "example"
     ]
   },
   "license": "MIT",

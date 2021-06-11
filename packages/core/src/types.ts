@@ -34,8 +34,8 @@ export interface IFeatureToggleAdapterClient<T> extends TinyEmitter {
 }
 
 export interface IFeatureToggle<T> {
-  start: (strategy: FeatureToggleStrategies) => Promise<void>;
-  stop: (strategy: FeatureToggleStrategies) => Promise<void>;
+  start: () => Promise<void>;
+  stop: () => Promise<void>;
   ready: () => Promise<void>;
   isEnabled: (flagName: string) => boolean;
   getFlag: (flagName: string) => FeatureToggleValue<T> | undefined;

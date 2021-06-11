@@ -3,7 +3,7 @@ import { FlagsConfig } from 'react-unleash-flags'
 export interface IConfig extends FlagsConfig {
   appName: string;
   instanceId: string;
-  uri?: string;
+  url: string;
 }
 
 export type Strategy = {

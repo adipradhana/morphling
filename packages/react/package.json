@@ -1,7 +1,7 @@
 {
-  "name": "@wartech/morphling-adapter-unleash",
+  "name": "@wartech/morphling-react",
   "version": "1.0.0",
-  "description": "Unleash feature flag service adapter",
+  "description": "Feature toggle/flag library",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -19,16 +19,26 @@
     "test": "concurrently yarn:test:*",
     "test:types": "tsc --noEmit"
   },
-  "dependencies": {
-    "@wartech/morphling-core": "1.0.0",
-    "react-unleash-flags": "^1.3.0",
-    "tiny-emitter": "^2.1.0"
-  },
   "devDependencies": {
-    "concurrently": "^6.2.0",
-    "esbuild": "^0.12.8",
+    "@types/react": "16.8",
+    "@types/react-dom": "16.8",
+    "@warungpintar/warpin-scripts": "*",
+    "esbuild": "^0.12.6",
+    "react": "16.8",
+    "react-dom": "16.8",
     "tsconfig-paths": "^3.9.0",
     "tsconfig-replace-paths": "^0.0.5",
     "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@wartech/morphling-adapter-unleash": "1.0.0",
+    "@wartech/morphling-core": "1.0.0",
+    "tiny-emitter": "^2.1.0"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.x"
+  },
+  "resolutions": {
+    "@types/react": "16.8"
   }
 }

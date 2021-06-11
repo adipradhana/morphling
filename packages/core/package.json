@@ -1,5 +1,5 @@
 {
-  "name": "@wartech/feature-toggle-core",
+  "name": "@wartech/morphling-core",
   "version": "1.0.0",
   "description": "Feature toggle/flag library",
   "main": "dist/index.js",
@@ -22,13 +22,11 @@
   "devDependencies": {
     "@warungpintar/warpin-scripts": "*",
     "esbuild": "^0.12.6",
-    "react": "16.4",
     "tsconfig-paths": "^3.9.0",
     "tsconfig-replace-paths": "^0.0.5",
     "typescript": "^4.3.2"
   },
   "dependencies": {
-    "@types/react": "^17.0.9",
     "tiny-emitter": "^2.1.0"
   }
 }

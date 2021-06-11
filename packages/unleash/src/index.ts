@@ -1,10 +1,11 @@
+export * from "~types";
 import {
   IFeatureToggleAdapterClient,
   FeatureToggleStrategies,
   FeatureToggleValue,
   EVENTS,
-} from '@wartech/feature-toggle-core';
-import { IConfig as IUnleashConfig, Metadata } from '../@types/adapter';
+} from '@wartech/morphling-core';
+import { IConfig as IUnleashConfig, Metadata } from '~types';
 import { FlagsClient } from 'react-unleash-flags';
 import { TinyEmitter } from 'tiny-emitter';
 
@@ -14,7 +15,7 @@ export default class Unleash extends TinyEmitter
   implements IFeatureToggleAdapterClient<Metadata> {
   client: FlagsClient;
   opts: IUnleashConfig;
-  timerRef?: number;
+  timerRef?: NodeJS.Timeout;
   isReady: boolean;
 
   constructor(opts: IUnleashConfig) {
@@ -63,7 +64,7 @@ export default class Unleash extends TinyEmitter
         await this.fetchFlags();
         this.isReady = true;
         this.emit(EVENTS.READY);
-        this.timerRef = window.setInterval(this.fetchFlags, interval);
+        this.timerRef = setInterval(this.fetchFlags, interval);
       } catch (e) {
         console.error(e);
       }
@@ -79,6 +80,8 @@ export default class Unleash extends TinyEmitter
   };
 
   private _checkValidStrategy(type: string) {
+    console.log('<<< type');
+    console.log(type);
     const SUPPORTED_STRATEGY_TYPES = ['poll'];
 
     if (!SUPPORTED_STRATEGY_TYPES.includes(type)) {
