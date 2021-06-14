@@ -1,5 +1,9 @@
 import { TinyEmitter } from 'tiny-emitter';
 
+export type EVENTS = {
+  READY: string;
+  UPDATE: string;
+};
 export interface FeatureToggleContext {
   adapter: (keys: boolean, fallback: boolean) => [boolean];
 }
@@ -37,6 +41,7 @@ export interface IFeatureToggle<T> {
   start: () => Promise<void>;
   stop: () => Promise<void>;
   ready: () => Promise<void>;
+  update: (callback: (value: FeatureToggleValue<T>) => void) => void;
   isEnabled: (flagName: string) => boolean;
   getFlag: (flagName: string) => FeatureToggleValue<T> | undefined;
 }

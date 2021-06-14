@@ -11,8 +11,6 @@ const withFeatureToggle =
         throw new Error(`featureFlag Provider is missing`);
       }
 
-      console.log('adapter.isEnabled(name)', name, adapter.isEnabled(name));
-
       if (adapter.isEnabled(name)) {
         return <Component {..._props} />;
       }

@@ -1,9 +1,7 @@
 export * from "~types";
+export { EVENTS } from "~constants";
+import { EVENTS } from "~constants";
 import { IFeatureToggleAdapterClient, IFeatureToggle, IFeatureToggleConfig, FeatureToggleValue } from "~types";
-
-export const EVENTS = {
-  READY: 'ready',
-};
 
 export default class FeatureToggle<T> implements IFeatureToggle<T> {
   'adapter': IFeatureToggleAdapterClient<T>;
@@ -22,6 +20,10 @@ export default class FeatureToggle<T> implements IFeatureToggle<T> {
 
   public ready = (): Promise<void> => {
     return this.adapter.ready();
+  };
+
+  public update = (callback) => {
+    this.adapter.on(EVENTS.UPDATE, (val) => callback(val));
   };
 
   public isEnabled(flagName: string): boolean {

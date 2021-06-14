@@ -16,7 +16,7 @@ const ffClient: IFeatureToggle<Metadata> = new FeatureToggle({
   adapter: new Unleash(flagConfig),
   strategy: {
     type: 'poll',
-    pollInterval: 1000, //milisec
+    pollInterval: 5000, //milisec
   },
 });
 

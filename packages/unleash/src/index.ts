@@ -9,7 +9,7 @@ import { IConfig as IUnleashConfig, Metadata } from '~types';
 import { FlagsClient } from 'react-unleash-flags';
 import { TinyEmitter } from 'tiny-emitter';
 
-const DEFAULT_POLL_INTERVAL = 30000;
+const DEFAULT_POLL_INTERVAL = 5 * 60000;
 
 export default class Unleash extends TinyEmitter
   implements IFeatureToggleAdapterClient<Metadata> {
@@ -64,7 +64,7 @@ export default class Unleash extends TinyEmitter
         await this.fetchFlags();
         this.isReady = true;
         this.emit(EVENTS.READY);
-        this.timerRef = setInterval(this.fetchFlags, interval);
+        this.timerRef = setInterval(this.polling, interval);
       } catch (e) {
         console.error(e);
       }
@@ -80,8 +80,6 @@ export default class Unleash extends TinyEmitter
   };
 
   private _checkValidStrategy(type: string) {
-    console.log('<<< type');
-    console.log(type);
     const SUPPORTED_STRATEGY_TYPES = ['poll'];
 
     if (!SUPPORTED_STRATEGY_TYPES.includes(type)) {
@@ -113,4 +111,9 @@ export default class Unleash extends TinyEmitter
       resolve(massagedFlags);
     });
   };
+
+  private polling = async () => {
+    const newPayload = await this.fetchFlags();
+    this.emit(EVENTS.UPDATE, newPayload);
+  }
 }

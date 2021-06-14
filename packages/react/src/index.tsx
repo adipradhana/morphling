@@ -1,7 +1,8 @@
-import React, { ReactNode, createContext, useState, useEffect, useCallback } from 'react';
+import React, { ReactNode, createContext, useState, useEffect, useCallback, useRef } from 'react';
 import propTypes from 'prop-types';
+import isEqual from 'lodash/isEqual'
 import { Metadata as UnleashMetadata } from '@wartech/morphling-adapter-unleash';
-import { IFeatureToggle } from '@wartech/morphling-core';
+import { IFeatureToggle, FeatureToggleValue } from '@wartech/morphling-core';
 
 interface IFeatureFlagStatus {
   isReady: boolean;
@@ -27,14 +28,33 @@ const FeatureToggleProvider: React.FC<ProviderProps<UnleashMetadata>> = ({
   children,
   adapter,
 }) => {
+  const [flags, setFlags] = useState([]);
   const [isReady, setReady] = useState(false);
+  const stateRef = useRef();
+  stateRef.current = flags as any;
+
+  const handleUpdate = (val) =>{
+    if (!isEqual(stateRef.current, val)) {
+      setFlags(val);
+    }
+  };
+
   // initialize the client instance
   const initState = useCallback(async () => {
     adapter.start();
     adapter.ready().then(() => {
+      if (!isReady) {}
       setReady(true);
     });
+
   }, [adapter]);
+
+  useEffect(() => {
+    if (isReady) {
+      adapter.update(handleUpdate);
+    }
+  }, [isReady])
+
 
   // call the init on load
   useEffect(() => {
@@ -65,8 +85,6 @@ const withFeatureToggle =
       if (!adapter) {
         throw new Error(`featureFlag Provider is missing`);
       }
-
-      console.log('adapter.isEnabled(name)', name, adapter.isEnabled(name));
 
       if (adapter.isEnabled(name)) {
         return <Component {..._props} />;
