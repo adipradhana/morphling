@@ -16,7 +16,12 @@ export type FeatureToggleValue<T> = {
 
 export type FeatureToggleStrategies =
   | FeatureTogglePollStrategy
-  | FeatureToggleSseStrategy;
+  | FeatureToggleSseStrategy
+  | FeatureToggleInitStrategy;
+
+export type FeatureToggleInitStrategy = {
+  type: 'init';
+};
 
 export type FeatureTogglePollStrategy = {
   type: 'poll';

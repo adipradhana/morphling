@@ -10,6 +10,7 @@ import { FlagsClient } from 'react-unleash-flags';
 import { TinyEmitter } from 'tiny-emitter';
 
 const DEFAULT_POLL_INTERVAL = 5 * 60000;
+const SUPPORTED_STRATEGY_TYPES = ['init', 'poll'];
 
 export default class Unleash extends TinyEmitter
   implements IFeatureToggleAdapterClient<Metadata> {
@@ -30,19 +31,23 @@ export default class Unleash extends TinyEmitter
     this._checkValidStrategy(strategy.type);
 
     switch (strategy.type) {
+      case 'init':
+        return this._handleStartInit();
       case 'poll':
         return this._handleStartPolling(strategy.pollInterval);
       default:
-        throw new Error(`${strategy.type} is not supported!`);
+        throw new Error(`${strategy.type} is unknown!`);
     }
   };
 
   public stop = (strategy: FeatureToggleStrategies): Promise<void> => {
     switch (strategy.type) {
+      case 'init':
+        return this._handleStopInit();
       case 'poll':
         return this._handleStopPolling();
       default:
-        throw new Error(`${strategy.type} is not supported!`);
+        throw new Error(`${strategy.type} is unknown!`);
     }
   };
 
@@ -54,10 +59,28 @@ export default class Unleash extends TinyEmitter
     return new Promise((resolve) => this.once(EVENTS.READY, resolve));
   };
 
+  private _handleStartInit = (): Promise<void> => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        await this.fetchFlags();
+        this.isReady = true;
+        this.emit(EVENTS.READY);
+        resolve();
+      } catch (e) {
+        console.error(e);
+        reject(e);
+      }
+    });
+  } 
+
+  private _handleStopInit = (): Promise<void> => {
+    return Promise.resolve()
+  } 
+
   private _handleStartPolling = (
     pollInterval = DEFAULT_POLL_INTERVAL,
   ): Promise<void> => {
-    return new Promise(async () => {
+    return new Promise(async (resolve, reject) => {
       try {
         await this._handleStopPolling();
         const interval = pollInterval;
@@ -65,8 +88,10 @@ export default class Unleash extends TinyEmitter
         this.isReady = true;
         this.emit(EVENTS.READY);
         this.timerRef = setInterval(this.polling, interval);
+        resolve();
       } catch (e) {
         console.error(e);
+        reject(e);
       }
     });
   };
@@ -80,10 +105,8 @@ export default class Unleash extends TinyEmitter
   };
 
   private _checkValidStrategy(type: string) {
-    const SUPPORTED_STRATEGY_TYPES = ['poll'];
-
     if (!SUPPORTED_STRATEGY_TYPES.includes(type)) {
-      throw Error('No type provided or type is not supported!');
+      throw Error('[morphling] No type provided or type is not supported!');
     }
   }
 
