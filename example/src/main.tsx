@@ -1,10 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { FeatureToggleProvider } from '@wartech/morphling-react';
-import Unleash, { Metadata, IConfig } from '@wartech/morphling-adapter-unleash';
+import Unleash, {
+  Metadata,
+  IConfig,
+} from '@wartech/morphling-adapter-unleash';
 import FeatureToggle, { IFeatureToggle } from '@wartech/morphling-core';
-import './index.css'
-import App from './App'
+import './index.css';
+import App from './App';
 
 const flagConfig: IConfig = {
   url: import.meta.env.VITE_MORPHLING_URL,
@@ -19,7 +22,7 @@ const ffClient: IFeatureToggle<Metadata> = new FeatureToggle({
   //   pollInterval: 5000, //milisec
   // },
   strategy: {
-    type: 'init'
+    type: 'init',
   },
 });
 
@@ -29,5 +32,5 @@ ReactDOM.render(
       <App />
     </FeatureToggleProvider>
   </React.StrictMode>,
-  document.getElementById('root')
-)
+  document.getElementById('root'),
+);

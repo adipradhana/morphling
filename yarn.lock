@@ -1211,6 +1211,11 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
+"@types/lodash@^4.14.171":
+  version "4.14.171"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.171.tgz#f01b3a5fe3499e34b622c362a46a609fdb23573b"
+  integrity sha512-7eQ2xYLLI/LsicL2nejW9Wyko3lcpN6O/z0ZLHrEQsg280zIdCv1t/0m6UtBjUHokCGBQ3gYTbHzDkZ1xOBwwg==
+
 "@types/minimatch@*":
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.4.tgz#f0ec25dbf2f0e4b18647313ac031134ca5b24b21"
@@ -1306,9 +1311,9 @@
     "@babel/plugin-transform-react-jsx-source" "^7.12.13"
     react-refresh "^0.9.0"
 
-"@warungpintar/babel-config@^0.3.3":
+"@wartech/babel-config@^0.3.3":
   version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@warungpintar/babel-config/-/babel-config-0.3.3.tgz#48b583c9aec16c08107e7177b7576d9d4e94e1c0"
+  resolved "https://registry.yarnpkg.com/@wartech/babel-config/-/babel-config-0.3.3.tgz#48b583c9aec16c08107e7177b7576d9d4e94e1c0"
   integrity sha512-6AUcEbQXmjoGSoQe01wThwCuJxqNlybapd6erJcjcEoVZlVYf4vF1mV5WIeCvReS0U0j9RcOi1juY+rcRdi8LA==
   dependencies:
     "@babel/cli" "^7.7.5"
@@ -1320,47 +1325,47 @@
     "@babel/preset-env" "^7.7.6"
     "@babel/preset-typescript" "^7.7.4"
 
-"@warungpintar/eslint-config-base@^0.2.2":
+"@wartech/eslint-config-base@^0.2.2":
   version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@warungpintar/eslint-config-base/-/eslint-config-base-0.2.2.tgz#9d5a7cf217d45730a47f55693d416d667624452e"
+  resolved "https://registry.yarnpkg.com/@wartech/eslint-config-base/-/eslint-config-base-0.2.2.tgz#9d5a7cf217d45730a47f55693d416d667624452e"
   integrity sha512-9OqJGWtQGByT7p+FeAKVxy6dnrCBWr/yZqVEtUW5gv+ZLTq1eawEbFZCfFyI9nZR7UTSiwO0mw9+qSC1W94RdQ==
   dependencies:
     eslint-config-prettier "^6.7.0"
     eslint-config-xo-space "^0.22.0"
 
-"@warungpintar/eslint-config-typescript@^0.2.2":
+"@wartech/eslint-config-typescript@^0.2.2":
   version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@warungpintar/eslint-config-typescript/-/eslint-config-typescript-0.2.2.tgz#c691e1370937e17d77e5c10a254d8268cae29186"
+  resolved "https://registry.yarnpkg.com/@wartech/eslint-config-typescript/-/eslint-config-typescript-0.2.2.tgz#c691e1370937e17d77e5c10a254d8268cae29186"
   integrity sha512-pBzI2QZe6VKOj6Zd/bFFsZJLSm0N3EOQAZ4QjtST4karISMrUPrFVJoxy6ksPfFw3UJAHsZD7y6qj564BR2sww==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.11.0"
     "@typescript-eslint/parser" "^2.11.0"
-    "@warungpintar/eslint-config-base" "^0.2.2"
+    "@wartech/eslint-config-base" "^0.2.2"
     eslint-config-prettier "^6.7.0"
     eslint-config-xo-typescript "^0.23.0"
 
-"@warungpintar/prettier-config@^0.1.2":
+"@wartech/prettier-config@^0.1.2":
   version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@warungpintar/prettier-config/-/prettier-config-0.1.2.tgz#8e14d0d9aee272084ec29b2af615abe883dafb13"
+  resolved "https://registry.yarnpkg.com/@wartech/prettier-config/-/prettier-config-0.1.2.tgz#8e14d0d9aee272084ec29b2af615abe883dafb13"
   integrity sha512-KgKN/isovdpx/AyyAeAhqRtZSy7SdIq4fB9zOKobFDA01LDiB0mAdA3EX4VdMYhgcuIcT7nDu4HrepwpnvepFQ==
 
-"@warungpintar/typescript-config@^0.3.1":
+"@wartech/typescript-config@^0.3.1":
   version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@warungpintar/typescript-config/-/typescript-config-0.3.1.tgz#ee671924057645f0eadb032701ebc3b2979e7d34"
+  resolved "https://registry.yarnpkg.com/@wartech/typescript-config/-/typescript-config-0.3.1.tgz#ee671924057645f0eadb032701ebc3b2979e7d34"
   integrity sha512-Pd+XfF3YCWEQ9IsASVnZLQlvHKXeqDgt9i8M6/x/ciKdB6ymtG6B2k4Gs6YGhYH5lkl5KPeOROf7AdsNH6RuuQ==
   dependencies:
     typescript "^3.7.3"
 
-"@warungpintar/warpin-scripts@*":
+"@wartech/warpin-scripts@*":
   version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@warungpintar/warpin-scripts/-/warpin-scripts-0.4.5.tgz#adde100d70486a91046b7454144803e2016bc433"
+  resolved "https://registry.yarnpkg.com/@wartech/warpin-scripts/-/warpin-scripts-0.4.5.tgz#adde100d70486a91046b7454144803e2016bc433"
   integrity sha512-d/nijdFd4/6UzCQLlOhyvzmINaaOq3AwvKxs/k4yZPskEzWiUKvBaq4NVnQr+rdFmtmo6r7D8lASUbLLYOtGGQ==
   dependencies:
-    "@warungpintar/babel-config" "^0.3.3"
-    "@warungpintar/eslint-config-base" "^0.2.2"
-    "@warungpintar/eslint-config-typescript" "^0.2.2"
-    "@warungpintar/prettier-config" "^0.1.2"
-    "@warungpintar/typescript-config" "^0.3.1"
+    "@wartech/babel-config" "^0.3.3"
+    "@wartech/eslint-config-base" "^0.2.2"
+    "@wartech/eslint-config-typescript" "^0.2.2"
+    "@wartech/prettier-config" "^0.1.2"
+    "@wartech/typescript-config" "^0.3.1"
     eslint "^6.7.2"
     prettier "^1.19.1"
     typescript "^3.7.3"

@@ -5,6 +5,17 @@
   "main": "index.js",
   "repository": "git@gitlab.warungpintar.co:wartech/feature-toggle.git",
   "author": "wartech",
+  "scripts": {
+    "build": "concurrently yarn:build:*",
+    "build:core-lib": "yarn --cwd packages/core build",
+    "build:unleash-lib": "yarn --cwd packages/unleash build",
+    "build:react-lib": "yarn --cwd packages/react build",
+    "dev": "concurrently yarn:dev:*",
+    "dev:core-lib": "yarn --cwd packages/core dev",
+    "dev:unleash-lib": "yarn --cwd packages/unleash dev",
+    "dev:react-lib": "yarn --cwd packages/react dev",
+    "dev:example": "yarn --cwd example dev"
+  },
   "workspaces": {
     "packages": [
       "packages/*",

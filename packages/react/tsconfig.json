@@ -12,11 +12,11 @@
     },
     "rootDir": "./src",
     "allowJs": true,
-    "target": "es2017",
+    "target": "es2015",
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": false,
-    "jsx": "react",
+    "jsx": "preserve",
     "declaration": true,
     "emitDeclarationOnly": true,
     "esModuleInterop": true
