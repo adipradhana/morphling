@@ -1,4 +1,4 @@
-export * from "~types";
+export * from '~types';
 import {
   IFeatureToggleAdapterClient,
   FeatureToggleStrategies,
@@ -71,11 +71,11 @@ export default class Unleash extends TinyEmitter
         reject(e);
       }
     });
-  } 
+  };
 
   private _handleStopInit = (): Promise<void> => {
-    return Promise.resolve()
-  } 
+    return Promise.resolve();
+  };
 
   private _handleStartPolling = (
     pollInterval = DEFAULT_POLL_INTERVAL,
@@ -110,9 +110,7 @@ export default class Unleash extends TinyEmitter
     }
   }
 
-  private _massageData = (
-    original: Metadata,
-  ): FeatureToggleValue<Metadata> => {
+  private _massageData = (original: Metadata): FeatureToggleValue<Metadata> => {
     return {
       name: original.name,
       isEnabled: original.enabled,
@@ -138,5 +136,5 @@ export default class Unleash extends TinyEmitter
   private polling = async () => {
     const newPayload = await this.fetchFlags();
     this.emit(EVENTS.UPDATE, newPayload);
-  }
+  };
 }

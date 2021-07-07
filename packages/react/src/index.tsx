@@ -1,8 +1,15 @@
-import React, { ReactNode, createContext, useState, useEffect, useCallback, useRef } from 'react';
+import React, {
+  ReactNode,
+  createContext,
+  useState,
+  useEffect,
+  useCallback,
+  useRef,
+} from 'react';
 import propTypes from 'prop-types';
-import isEqual from 'lodash/isEqual'
+import isEqual from 'lodash/isEqual';
 import { Metadata as UnleashMetadata } from '@wartech/morphling-adapter-unleash';
-import { IFeatureToggle, FeatureToggleValue } from '@wartech/morphling-core';
+import { IFeatureToggle } from '@wartech/morphling-core';
 
 interface IFeatureFlagStatus {
   isReady: boolean;
@@ -33,7 +40,7 @@ const FeatureToggleProvider: React.FC<ProviderProps<UnleashMetadata>> = ({
   const stateRef = useRef();
   stateRef.current = flags as any;
 
-  const handleUpdate = (val) =>{
+  const handleUpdate = (val) => {
     if (!isEqual(stateRef.current, val)) {
       setFlags(val);
     }
@@ -43,18 +50,17 @@ const FeatureToggleProvider: React.FC<ProviderProps<UnleashMetadata>> = ({
   const initState = useCallback(async () => {
     adapter.start();
     adapter.ready().then(() => {
-      if (!isReady) {}
+      if (!isReady) {
+      }
       setReady(true);
     });
-
   }, [adapter]);
 
   useEffect(() => {
     if (isReady) {
       adapter.update(handleUpdate);
     }
-  }, [isReady])
-
+  }, [isReady]);
 
   // call the init on load
   useEffect(() => {
@@ -76,28 +82,25 @@ FeatureToggleProvider.propTypes = {
   adapter: propTypes.any,
 };
 
-const withFeatureToggle =
-  (name: string) => (FallbackComponent: React.FC) => (Component: React.FC) => {
-    const withFeatureToggle: React.FC<any> = (props) => {
-      const _props = props ?? {};
-      const { adapter } = React.useContext(FeatureFlagContext) ?? {};
+const withFeatureToggle = (name: string) => (FallbackComponent: React.FC) => (
+  Component: React.FC,
+) => {
+  const withFeatureToggle: React.FC<any> = (props) => {
+    const _props = props ?? {};
+    const { adapter } = React.useContext(FeatureFlagContext) ?? {};
 
-      if (!adapter) {
-        throw new Error(`featureFlag Provider is missing`);
-      }
+    if (!adapter) {
+      throw new Error(`featureFlag Provider is missing`);
+    }
 
-      if (adapter.isEnabled(name)) {
-        return <Component {..._props} />;
-      }
+    if (adapter.isEnabled(name)) {
+      return <Component {..._props} />;
+    }
 
-      return <FallbackComponent {..._props} />;
-    };
-
-    return withFeatureToggle;
+    return <FallbackComponent {..._props} />;
   };
 
-export {
-  FeatureFlagContext,
-  FeatureToggleProvider,
-  withFeatureToggle
+  return withFeatureToggle;
 };
+
+export { FeatureFlagContext, FeatureToggleProvider, withFeatureToggle };

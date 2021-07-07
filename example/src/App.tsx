@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import { withFeatureToggle } from '@wartech/morphling-react';
 
-import './App.css'
+import './App.css';
 
 const ButtonOld = () => <button>Button Fallback</button>;
 const ButtonNew = () => <button>Button New</button>;
@@ -10,8 +10,7 @@ const ButtonNew = () => <button>Button New</button>;
 const FlaggedButton = withFeatureToggle('test-button')(ButtonOld)(ButtonNew);
 
 function App() {
-
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
@@ -50,7 +49,7 @@ function App() {
         </p>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
