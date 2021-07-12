@@ -1250,13 +1250,27 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@16.8", "@types/react@^17.0.0":
+"@types/react@*", "@types/react@16.8":
   version "16.8.25"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.25.tgz#0247613ab58b1b11ba10fed662e1947c5f2bb89c"
   integrity sha512-ydAAkLnNTC4oYSxJ3zwK/4QcVmEecACJ4ZdxXITbxz/dhahBSDKY6OQ1uawAW6rE/7kfHccxulYLSAIZVrSq0A==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
+
+"@types/react@^17.0.0":
+  version "17.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.14.tgz#f0629761ca02945c4e8fea99b8177f4c5c61fb0f"
+  integrity sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
+  integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
 "@typescript-eslint/eslint-plugin@^2.11.0":
   version "2.34.0"
@@ -1311,9 +1325,9 @@
     "@babel/plugin-transform-react-jsx-source" "^7.12.13"
     react-refresh "^0.9.0"
 
-"@wartech/babel-config@^0.3.3":
+"@warungpintar/babel-config@^0.3.3":
   version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@wartech/babel-config/-/babel-config-0.3.3.tgz#48b583c9aec16c08107e7177b7576d9d4e94e1c0"
+  resolved "https://registry.yarnpkg.com/@warungpintar/babel-config/-/babel-config-0.3.3.tgz#48b583c9aec16c08107e7177b7576d9d4e94e1c0"
   integrity sha512-6AUcEbQXmjoGSoQe01wThwCuJxqNlybapd6erJcjcEoVZlVYf4vF1mV5WIeCvReS0U0j9RcOi1juY+rcRdi8LA==
   dependencies:
     "@babel/cli" "^7.7.5"
@@ -1325,47 +1339,47 @@
     "@babel/preset-env" "^7.7.6"
     "@babel/preset-typescript" "^7.7.4"
 
-"@wartech/eslint-config-base@^0.2.2":
+"@warungpintar/eslint-config-base@^0.2.2":
   version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@wartech/eslint-config-base/-/eslint-config-base-0.2.2.tgz#9d5a7cf217d45730a47f55693d416d667624452e"
+  resolved "https://registry.yarnpkg.com/@warungpintar/eslint-config-base/-/eslint-config-base-0.2.2.tgz#9d5a7cf217d45730a47f55693d416d667624452e"
   integrity sha512-9OqJGWtQGByT7p+FeAKVxy6dnrCBWr/yZqVEtUW5gv+ZLTq1eawEbFZCfFyI9nZR7UTSiwO0mw9+qSC1W94RdQ==
   dependencies:
     eslint-config-prettier "^6.7.0"
     eslint-config-xo-space "^0.22.0"
 
-"@wartech/eslint-config-typescript@^0.2.2":
+"@warungpintar/eslint-config-typescript@^0.2.2":
   version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@wartech/eslint-config-typescript/-/eslint-config-typescript-0.2.2.tgz#c691e1370937e17d77e5c10a254d8268cae29186"
+  resolved "https://registry.yarnpkg.com/@warungpintar/eslint-config-typescript/-/eslint-config-typescript-0.2.2.tgz#c691e1370937e17d77e5c10a254d8268cae29186"
   integrity sha512-pBzI2QZe6VKOj6Zd/bFFsZJLSm0N3EOQAZ4QjtST4karISMrUPrFVJoxy6ksPfFw3UJAHsZD7y6qj564BR2sww==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.11.0"
     "@typescript-eslint/parser" "^2.11.0"
-    "@wartech/eslint-config-base" "^0.2.2"
+    "@warungpintar/eslint-config-base" "^0.2.2"
     eslint-config-prettier "^6.7.0"
     eslint-config-xo-typescript "^0.23.0"
 
-"@wartech/prettier-config@^0.1.2":
+"@warungpintar/prettier-config@^0.1.2":
   version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@wartech/prettier-config/-/prettier-config-0.1.2.tgz#8e14d0d9aee272084ec29b2af615abe883dafb13"
+  resolved "https://registry.yarnpkg.com/@warungpintar/prettier-config/-/prettier-config-0.1.2.tgz#8e14d0d9aee272084ec29b2af615abe883dafb13"
   integrity sha512-KgKN/isovdpx/AyyAeAhqRtZSy7SdIq4fB9zOKobFDA01LDiB0mAdA3EX4VdMYhgcuIcT7nDu4HrepwpnvepFQ==
 
-"@wartech/typescript-config@^0.3.1":
+"@warungpintar/typescript-config@^0.3.1":
   version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@wartech/typescript-config/-/typescript-config-0.3.1.tgz#ee671924057645f0eadb032701ebc3b2979e7d34"
+  resolved "https://registry.yarnpkg.com/@warungpintar/typescript-config/-/typescript-config-0.3.1.tgz#ee671924057645f0eadb032701ebc3b2979e7d34"
   integrity sha512-Pd+XfF3YCWEQ9IsASVnZLQlvHKXeqDgt9i8M6/x/ciKdB6ymtG6B2k4Gs6YGhYH5lkl5KPeOROf7AdsNH6RuuQ==
   dependencies:
     typescript "^3.7.3"
 
-"@wartech/warpin-scripts@*":
+"@warungpintar/warpin-scripts@*":
   version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@wartech/warpin-scripts/-/warpin-scripts-0.4.5.tgz#adde100d70486a91046b7454144803e2016bc433"
+  resolved "https://registry.yarnpkg.com/@warungpintar/warpin-scripts/-/warpin-scripts-0.4.5.tgz#adde100d70486a91046b7454144803e2016bc433"
   integrity sha512-d/nijdFd4/6UzCQLlOhyvzmINaaOq3AwvKxs/k4yZPskEzWiUKvBaq4NVnQr+rdFmtmo6r7D8lASUbLLYOtGGQ==
   dependencies:
-    "@wartech/babel-config" "^0.3.3"
-    "@wartech/eslint-config-base" "^0.2.2"
-    "@wartech/eslint-config-typescript" "^0.2.2"
-    "@wartech/prettier-config" "^0.1.2"
-    "@wartech/typescript-config" "^0.3.1"
+    "@warungpintar/babel-config" "^0.3.3"
+    "@warungpintar/eslint-config-base" "^0.2.2"
+    "@warungpintar/eslint-config-typescript" "^0.2.2"
+    "@warungpintar/prettier-config" "^0.1.2"
+    "@warungpintar/typescript-config" "^0.3.1"
     eslint "^6.7.2"
     prettier "^1.19.1"
     typescript "^3.7.3"
@@ -1827,6 +1841,11 @@ csstype@^2.2.0:
   version "2.6.17"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.17.tgz#4cf30eb87e1d1a005d8b6510f95292413f6a1c0e"
   integrity sha512-u1wmTI1jJGzCJzWndZo8mk4wnPTZd1eOIYTYvuEyOQGfmDl3TrabCCfKnOC86FZwW/9djqTl933UF/cS425i9A==
+
+csstype@^3.0.2:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
+  integrity sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==
 
 date-fns@^2.16.1:
   version "2.22.1"

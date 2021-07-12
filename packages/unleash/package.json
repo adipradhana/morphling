@@ -1,5 +1,5 @@
 {
-  "name": "@wartech/morphling-adapter-unleash",
+  "name": "@warungpintar/morphling-adapter-unleash",
   "version": "1.0.0",
   "description": "Unleash feature flag service adapter",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "test:types": "tsc --noEmit"
   },
   "dependencies": {
-    "@wartech/morphling-core": "1.0.0",
+    "@warungpintar/morphling-core": "1.0.0",
     "react-unleash-flags": "^1.3.0",
     "tiny-emitter": "^2.1.0"
   },

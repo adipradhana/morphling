@@ -4,7 +4,7 @@ import {
   FeatureToggleStrategies,
   FeatureToggleValue,
   EVENTS,
-} from '@wartech/morphling-core';
+} from '@warungpintar/morphling-core';
 import { IConfig as IUnleashConfig, Metadata } from '~types';
 import { FlagsClient } from 'react-unleash-flags';
 import { TinyEmitter } from 'tiny-emitter';

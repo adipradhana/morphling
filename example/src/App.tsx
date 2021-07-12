@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import { withFeatureToggle } from '@wartech/morphling-react';
+import { withFeatureToggle } from '@warungpintar/morphling-react';
 
 import './App.css';
 

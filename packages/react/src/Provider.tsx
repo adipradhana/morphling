@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import propTypes from 'prop-types';
-import { Metadata as UnleashMetadata } from '@wartech/morphling-adapter-unleash';
+import { Metadata as UnleashMetadata } from '@warungpintar/morphling-adapter-unleash';
 import { ProviderProps } from './types';
 import FeatureFlagContext from './Context';
 

@@ -1,6 +1,6 @@
 import { IFeatureFlagContextValues } from './types';
 import { createContext } from 'react';
-import { Metadata as UnleashMetadata } from '@wartech/morphling-adapter-unleash';
+import { Metadata as UnleashMetadata } from '@warungpintar/morphling-adapter-unleash';
 
 const FeatureFlagContext = createContext<
   IFeatureFlagContextValues<UnleashMetadata>

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { IFeatureToggle } from '@wartech/morphling-core';
+import { IFeatureToggle } from '@warungpintar/morphling-core';
 
 interface IFeatureFlagStatus {
   isReady?: boolean;

@@ -1,1 +1,1 @@
-module.exports = require('@wartech/warpin-scripts/config/prettier.config.js');
+module.exports = require('@warungpintar/warpin-scripts/config/prettier.config.js');

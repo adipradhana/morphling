@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { FeatureToggleProvider } from '@wartech/morphling-react';
+import { FeatureToggleProvider } from '@warungpintar/morphling-react';
 import Unleash, {
   Metadata,
   IConfig,
-} from '@wartech/morphling-adapter-unleash';
-import FeatureToggle, { IFeatureToggle } from '@wartech/morphling-core';
+} from '@warungpintar/morphling-adapter-unleash';
+import FeatureToggle, { IFeatureToggle } from '@warungpintar/morphling-core';
 import './index.css';
 import App from './App';
 

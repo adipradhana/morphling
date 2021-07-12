@@ -8,8 +8,8 @@ import React, {
 } from 'react';
 import propTypes from 'prop-types';
 import isEqual from 'lodash/isEqual';
-import { Metadata as UnleashMetadata } from '@wartech/morphling-adapter-unleash';
-import { IFeatureToggle } from '@wartech/morphling-core';
+import { Metadata as UnleashMetadata } from '@warungpintar/morphling-adapter-unleash';
+import { IFeatureToggle } from '@warungpintar/morphling-core';
 
 interface IFeatureFlagStatus {
   isReady: boolean;
