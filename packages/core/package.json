@@ -6,7 +6,7 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "repository": "https://gitlab.warungpintar.co/wartech/feature-toggle.git",
-  "author": "wartech",
+  "author": "warungpintar",
   "license": "MIT",
   "files": [
     "dist"

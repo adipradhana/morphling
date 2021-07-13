@@ -14,7 +14,22 @@
     "dev:core-lib": "yarn --cwd packages/core dev",
     "dev:unleash-lib": "yarn --cwd packages/unleash dev",
     "dev:react-lib": "yarn --cwd packages/react dev",
-    "dev:example": "yarn --cwd example dev"
+    "dev:example": "yarn --cwd example dev",
+    "release": "concurrently yarn:release:*",
+    "release:core-lib": "yarn build:core-lib && yarn --cwd packages/core run semantic-release -e semantic-release-monorepo",
+    "release:unleash-lib": "yarn build:unleash-lib && yarn --cwd packages/unleash run semantic-release -e semantic-release-monorepo",
+    "release:react-lib": "yarn build:react-lib && yarn --cwd packages/react run semantic-release -e semantic-release-monorepo"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/gitlab": "^6.1.0",
+    "@semantic-release/npm": "^7.1.3",
+    "@semantic-release/release-notes-generator": "^9.0.2",
+    "concurrently": "^6.2.0",
+    "semantic-release": "^17.4.3",
+    "semantic-release-monorepo": "^7.0.5"
   },
   "workspaces": {
     "packages": [
