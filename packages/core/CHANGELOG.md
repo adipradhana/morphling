@@ -1,3 +1,10 @@
+# [@warungpintar/morphling-core-v1.1.0](https://gitlab.warungpintar.co/wartech/feature-toggle/compare/@warungpintar/morphling-core-v1.0.0...@warungpintar/morphling-core-v1.1.0) (2021-07-13)
+
+
+### Features
+
+* initial release ([a219362](https://gitlab.warungpintar.co/wartech/feature-toggle/commit/a219362135f41d0851f063734d3b72bc7570900e))
+
 # @warungpintar/morphling-core-v1.0.0 (2021-07-13)
 
 
