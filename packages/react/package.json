@@ -25,6 +25,7 @@
     "@types/react-dom": "16.8",
     "@warungpintar/warpin-scripts": "*",
     "esbuild": "^0.12.6",
+    "execa": "^5.1.1",
     "react": "16.8",
     "react-dom": "16.8",
     "tsconfig-paths": "^3.9.0",
@@ -32,8 +33,8 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
-    "@warungpintar/morphling-adapter-unleash": "1.0.0",
-    "@warungpintar/morphling-core": "1.0.0",
+    "@warungpintar/morphling-adapter-unleash": "latest",
+    "@warungpintar/morphling-core": "latest",
     "lodash": "^4.17.21",
     "tiny-emitter": "^2.1.0"
   },
