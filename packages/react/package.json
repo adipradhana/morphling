@@ -44,8 +44,5 @@
     "@warungpintar/morphling-adapter-unleash": "^1",
     "@warungpintar/morphling-core": "^1",
     "react": ">= 16.8.x"
-  },
-  "resolutions": {
-    "@types/react": "16.8"
   }
 }
