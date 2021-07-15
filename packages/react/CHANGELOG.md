@@ -1,3 +1,13 @@
+# [@warungpintar/morphling-react-v1.0.1](https://gitlab.warungpintar.co/warungpintar/feature-toggle/compare/@warungpintar/morphling-react-v1.0.0...@warungpintar/morphling-react-v1.0.1) (2021-07-15)
+
+
+### Bug Fixes
+
+* build commands ([1a75d35](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/1a75d35df93e78f1e7188407773144b7de3072ac))
+* build scripts ([0dfd729](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/0dfd72975f13049f22d1acc07fe1737de36d7a6c))
+* circular deps ([22398f9](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/22398f9e7966511a6b66d0f258c8fb99d85d0820))
+* version number ([798064e](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/798064e03a6dbf81d64189478e0975a7bb571f5d))
+
 # @warungpintar/morphling-react-v1.0.0 (2021-07-15)
 
 
