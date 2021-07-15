@@ -12,11 +12,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "concurrently yarn:build:*",
+    "build": "npx concurrently yarn:build:*",
     "build:lib": "./scripts/build.js",
     "build:types": "tsc && tsconfig-replace-paths --project tsconfig.json",
     "dev": "./scripts/watch.js",
-    "test": "concurrently yarn:test:*",
+    "test": "npx concurrently yarn:test:*",
     "test:types": "tsc --noEmit"
   },
   "peerDependencies": {

@@ -12,17 +12,19 @@
     "dist"
   ],
   "scripts": {
-    "build": "concurrently yarn:build:*",
+    "build": "npx concurrently yarn:build:*",
     "build:lib": "./scripts/build.js",
     "build:types": "tsc && tsconfig-replace-paths --project tsconfig.json",
     "dev": "./scripts/watch.js",
-    "test": "concurrently yarn:test:*",
+    "test": "npx concurrently yarn:test:*",
     "test:types": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.171",
     "@types/react": "16.8",
     "@types/react-dom": "16.8",
+    "@warungpintar/morphling-adapter-unleash": "^1",
+    "@warungpintar/morphling-core": "^1",
     "@warungpintar/warpin-scripts": "*",
     "concurrently": "^6.2.0",
     "esbuild": "^0.12.6",
@@ -31,18 +33,16 @@
     "react-dom": "16.8",
     "tsconfig-paths": "^3.9.0",
     "tsconfig-replace-paths": "^0.0.5",
-    "typescript": "^4.3.2",
-    "@warungpintar/morphling-adapter-unleash": "^1",
-    "@warungpintar/morphling-core": "^1"
+    "typescript": "^4.3.2"
   },
   "dependencies": {
     "lodash": "^4.17.21",
     "tiny-emitter": "^2.1.0"
   },
   "peerDependencies": {
-    "react": ">= 16.8.x",
     "@warungpintar/morphling-adapter-unleash": "^1",
-    "@warungpintar/morphling-core": "^1"
+    "@warungpintar/morphling-core": "^1",
+    "react": ">= 16.8.x"
   },
   "resolutions": {
     "@types/react": "16.8"
