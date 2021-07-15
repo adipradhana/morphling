@@ -1,3 +1,10 @@
+# [@warungpintar/morphling-adapter-unleash-v1.2.0](https://gitlab.warungpintar.co/warungpintar/feature-toggle/compare/@warungpintar/morphling-adapter-unleash-v1.1.0...@warungpintar/morphling-adapter-unleash-v1.2.0) (2021-07-15)
+
+
+### Features
+
+* fix head ([81e72a2](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/81e72a22d71736a7da4d3e70c8b862f816f4aadb))
+
 # [@warungpintar/morphling-adapter-unleash-v1.1.0](https://gitlab.warungpintar.co/warungpintar/feature-toggle/compare/@warungpintar/morphling-adapter-unleash-v1.0.2...@warungpintar/morphling-adapter-unleash-v1.1.0) (2021-07-15)
 
 ### Features
