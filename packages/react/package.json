@@ -1,6 +1,6 @@
 {
   "name": "@warungpintar/morphling-react",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Feature toggle/flag library",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -33,8 +33,8 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
-    "@warungpintar/morphling-adapter-unleash": "latest",
-    "@warungpintar/morphling-core": "latest",
+    "@warungpintar/morphling-adapter-unleash": "0.1.0",
+    "@warungpintar/morphling-core": "0.1.0",
     "lodash": "^4.17.21",
     "tiny-emitter": "^2.1.0"
   },
