@@ -1,3 +1,10 @@
+# [@warungpintar/morphling-adapter-unleash-v1.1.0](https://gitlab.warungpintar.co/warungpintar/feature-toggle/compare/@warungpintar/morphling-adapter-unleash-v1.0.2...@warungpintar/morphling-adapter-unleash-v1.1.0) (2021-07-15)
+
+
+### Features
+
+* fake release ([1ce656e](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/1ce656e0c4bd8d4a688b79f04e717089a0be5ac4))
+
 # [@warungpintar/morphling-adapter-unleash-v1.0.2](https://gitlab.warungpintar.co/warungpintar/feature-toggle/compare/@warungpintar/morphling-adapter-unleash-v1.0.1...@warungpintar/morphling-adapter-unleash-v1.0.2) (2021-07-15)
 
 
