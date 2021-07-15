@@ -1,3 +1,10 @@
+# [@warungpintar/morphling-adapter-unleash-v1.0.1](https://gitlab.warungpintar.co/warungpintar/feature-toggle/compare/@warungpintar/morphling-adapter-unleash-v1.0.0...@warungpintar/morphling-adapter-unleash-v1.0.1) (2021-07-15)
+
+
+### Bug Fixes
+
+* circular deps ([22398f9](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/22398f9e7966511a6b66d0f258c8fb99d85d0820))
+
 # @warungpintar/morphling-adapter-unleash-v1.0.0 (2021-07-15)
 
 
