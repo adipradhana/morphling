@@ -1,3 +1,10 @@
+# [@warungpintar/morphling-react-v1.1.0](https://gitlab.warungpintar.co/warungpintar/feature-toggle/compare/@warungpintar/morphling-react-v1.0.1...@warungpintar/morphling-react-v1.1.0) (2021-07-15)
+
+
+### Features
+
+* fake release ([1ce656e](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/1ce656e0c4bd8d4a688b79f04e717089a0be5ac4))
+
 # [@warungpintar/morphling-react-v1.0.1](https://gitlab.warungpintar.co/warungpintar/feature-toggle/compare/@warungpintar/morphling-react-v1.0.0...@warungpintar/morphling-react-v1.0.1) (2021-07-15)
 
 
