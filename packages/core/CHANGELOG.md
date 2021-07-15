@@ -1,5 +1,18 @@
 # [@warungpintar/morphling-core-v1.1.0](https://gitlab.warungpintar.co/warungpintar/feature-toggle/compare/@warungpintar/morphling-core-v1.0.1...@warungpintar/morphling-core-v1.1.0) (2021-07-15)
 
+
+### Bug Fixes
+
+* build scripts ([0dfd729](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/0dfd72975f13049f22d1acc07fe1737de36d7a6c))
+
+
+### Features
+
+* fake release ([1ce656e](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/1ce656e0c4bd8d4a688b79f04e717089a0be5ac4))
+* fix head ([81e72a2](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/81e72a22d71736a7da4d3e70c8b862f816f4aadb))
+
+# [@warungpintar/morphling-core-v1.1.0](https://gitlab.warungpintar.co/warungpintar/feature-toggle/compare/@warungpintar/morphling-core-v1.0.1...@warungpintar/morphling-core-v1.1.0) (2021-07-15)
+
 ### Bug Fixes
 
 - build scripts ([0dfd729](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/0dfd72975f13049f22d1acc07fe1737de36d7a6c))
