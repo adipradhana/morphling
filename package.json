@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A feature toggles/flags library",
   "main": "index.js",
-  "repository": "git@gitlab.warungpintar.co:wartech/feature-toggle.git",
+  "repository": "git@gitlab.warungpintar.co:warungpintar/feature-toggle.git",
   "author": "wartech",
   "scripts": {
     "build": "concurrently yarn:build:*",
