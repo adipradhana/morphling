@@ -1,3 +1,10 @@
+# [@warungpintar/morphling-core-v1.0.1](https://gitlab.warungpintar.co/warungpintar/feature-toggle/compare/@warungpintar/morphling-core-v1.0.0...@warungpintar/morphling-core-v1.0.1) (2021-07-15)
+
+
+### Bug Fixes
+
+* deps resolution ([e132ad2](https://gitlab.warungpintar.co/warungpintar/feature-toggle/commit/e132ad2862e0fccef3623689143efc36d7f77149))
+
 # @warungpintar/morphling-core-v1.0.0 (2021-07-15)
 
 
