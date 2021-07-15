@@ -19,12 +19,15 @@
     "test": "concurrently yarn:test:*",
     "test:types": "tsc --noEmit"
   },
+  "peerDependencies": {
+    "@warungpintar/morphling-core": "^1"
+  },
   "dependencies": {
-    "@warungpintar/morphling-core": "^1",
     "react-unleash-flags": "^1.3.0",
     "tiny-emitter": "^2.1.0"
   },
   "devDependencies": {
+    "@warungpintar/morphling-core": "^1",
     "concurrently": "^6.2.0",
     "esbuild": "^0.12.8",
     "execa": "^5.1.1",
