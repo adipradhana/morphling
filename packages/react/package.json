@@ -34,8 +34,8 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
-    "@warungpintar/morphling-adapter-unleash": "0.1.0",
-    "@warungpintar/morphling-core": "0.1.0",
+    "@warungpintar/morphling-adapter-unleash": "^1",
+    "@warungpintar/morphling-core": "^1",
     "lodash": "^4.17.21",
     "tiny-emitter": "^2.1.0"
   },

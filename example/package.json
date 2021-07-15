@@ -8,8 +8,8 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@warungpintar/morphling-adapter-unleash":"0.1.0",
-    "@warungpintar/morphling-react":"0.1.0",
+    "@warungpintar/morphling-adapter-unleash": "^1",
+    "@warungpintar/morphling-react": "^1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },

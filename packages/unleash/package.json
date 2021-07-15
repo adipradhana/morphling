@@ -20,7 +20,7 @@
     "test:types": "tsc --noEmit"
   },
   "dependencies": {
-    "@warungpintar/morphling-core": "0.1.0",
+    "@warungpintar/morphling-core": "^1",
     "react-unleash-flags": "^1.3.0",
     "tiny-emitter": "^2.1.0"
   },
