@@ -1,6 +1,6 @@
 {
   "name": "feature-toggle",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A feature toggles/flags library",
   "main": "index.js",
   "repository": "git@gitlab.warungpintar.co:warungpintar/feature-toggle.git",
