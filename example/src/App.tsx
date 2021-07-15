@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import { withFeatureToggle } from '@warungpintar/morphling-react';
+import { createToggleFn } from '@warungpintar/morphling-core';
 
 import './App.css';
 
-const ButtonOld = () => <button>Button Fallback</button>;
-const ButtonNew = () => <button>Button New</button>;
+const fnA = () => alert('im disabled');
+const fnB = () => alert('im enabled');
+
+const toggledFn = createToggleFn('test-button')(fnA)(fnB);
+
+const ButtonOld = () => <button onClick={toggledFn}>Button Fallback</button>;
+const ButtonNew = () => <button onClick={toggledFn}>Button New</button>;
 
 const FlaggedButton = withFeatureToggle('test-button')(ButtonOld)(ButtonNew);
 
