@@ -24,6 +24,7 @@
     "@types/react": "16.8",
     "@types/react-dom": "16.8",
     "@warungpintar/warpin-scripts": "*",
+    "concurrently": "^6.2.0",
     "esbuild": "^0.12.6",
     "execa": "^5.1.1",
     "react": "16.8",

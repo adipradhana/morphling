@@ -1,6 +1,6 @@
 {
   "name": "@warungpintar/morphling-core",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Feature toggle/flag library",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@warungpintar/warpin-scripts": "*",
+    "concurrently": "^6.2.0",
     "esbuild": "^0.12.6",
     "execa": "^5.1.1",
     "tsconfig-paths": "^3.9.0",
