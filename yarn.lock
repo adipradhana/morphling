@@ -1779,6 +1779,44 @@
     eslint-config-prettier "^6.7.0"
     eslint-config-xo-typescript "^0.23.0"
 
+"@warungpintar/morphling-adapter-unleash@1.0.0":
+  version "1.1.0"
+  dependencies:
+    "@warungpintar/morphling-core" latest
+    react-unleash-flags "^1.3.0"
+    tiny-emitter "^2.1.0"
+
+"@warungpintar/morphling-adapter-unleash@latest":
+  version "1.1.0"
+  resolved "https://gitlab.warungpintar.co/api/v4/projects/804/packages/npm/@warungpintar/morphling-adapter-unleash/-/@warungpintar/morphling-adapter-unleash-1.1.0.tgz#1ee00dbec695e107e179b93ce417aee1f3254dde"
+  integrity sha1-HuANvsaV4Qfhebk85Beu4fMlTd4=
+  dependencies:
+    "@warungpintar/morphling-core" "1.0.0"
+    react-unleash-flags "^1.3.0"
+    tiny-emitter "^2.1.0"
+
+"@warungpintar/morphling-core@1.0.0":
+  version "1.1.0"
+  dependencies:
+    tiny-emitter "^2.1.0"
+
+"@warungpintar/morphling-core@latest":
+  version "1.1.0"
+  resolved "https://gitlab.warungpintar.co/api/v4/projects/804/packages/npm/@warungpintar/morphling-core/-/@warungpintar/morphling-core-1.1.0.tgz#ee1d4fec3f5a7448ae65770012b264a7e9c918d2"
+  integrity sha1-7h1P7D9adEiuZXcAErJkp+nJGNI=
+  dependencies:
+    tiny-emitter "^2.1.0"
+
+"@warungpintar/morphling-react@latest":
+  version "1.0.0"
+  resolved "https://gitlab.warungpintar.co/api/v4/projects/804/packages/npm/@warungpintar/morphling-react/-/@warungpintar/morphling-react-1.0.0.tgz#0e31a853ae995ed2ec311f3edbb5cf3b51299c83"
+  integrity sha1-DjGoU66ZXtLsMR8+27XPO1EpnIM=
+  dependencies:
+    "@warungpintar/morphling-adapter-unleash" "1.0.0"
+    "@warungpintar/morphling-core" "1.0.0"
+    lodash "^4.17.21"
+    tiny-emitter "^2.1.0"
+
 "@warungpintar/prettier-config@^0.1.2":
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@warungpintar/prettier-config/-/prettier-config-0.1.2.tgz#8e14d0d9aee272084ec29b2af615abe883dafb13"
@@ -3187,7 +3225,7 @@ execa@^4.0.0:
     signal-exit "^3.0.2"
     strip-final-newline "^2.0.0"
 
-execa@^5.0.0:
+execa@^5.0.0, execa@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/execa/-/execa-5.1.1.tgz#f80ad9cbf4298f7bd1d4c9555c21e93741c411dd"
   integrity sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==

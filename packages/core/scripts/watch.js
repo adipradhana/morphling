@@ -1,10 +1,12 @@
 #!/usr/bin/env node
-const path = require("path");
-const esbuild = require("esbuild");
-const packageJson = require("../package.json");
-const { baseConfig } = require("./config");
+const esbuild = require('esbuild');
+const { baseConfig } = require('./config');
+const execa = require('execa');
 
 (async () => {
+  await execa('yarn', ['build:types'], {
+    cwd: __dirname,
+  }).stdout.pipe(process.stdout);
   await esbuild.build({
     ...baseConfig,
     minify: false,
