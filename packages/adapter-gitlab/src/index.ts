@@ -1,53 +1,63 @@
 export * from '~types';
 import {
   IFeatureToggleAdapterClient,
-  FeatureToggleStrategies,
   FeatureToggleValue,
+  FeatureTogglePollStrategy,
   EVENTS,
 } from '@warungpintar/morphling-core';
-import { IConfig as IUnleashConfig, Metadata } from '~types';
+import { IConfig as IGitlabUnleashConfig, Metadata } from '~types';
 import { FlagsClient } from 'react-unleash-flags';
 import { TinyEmitter } from 'tiny-emitter';
 
 const DEFAULT_POLL_INTERVAL = 5 * 60000;
 const SUPPORTED_STRATEGY_TYPES = ['init', 'poll'];
 
-export default class Unleash extends TinyEmitter
+export default class GitlabUnleash extends TinyEmitter
   implements IFeatureToggleAdapterClient<Metadata> {
   client: FlagsClient;
-  opts: IUnleashConfig;
+  opts: IGitlabUnleashConfig;
   timerRef?: NodeJS.Timeout;
   isReady: boolean;
 
-  constructor(opts: IUnleashConfig) {
+  SUPPORTED_STRATEGY_TYPES = {
+    init: 'init',
+    poll: 'poll',
+  };
+
+  constructor(opts: IGitlabUnleashConfig) {
     super();
+  
+    this._checkValidStrategy(opts.strategy?.type);
+  
     this.opts = opts;
     this.client = new FlagsClient(opts);
     this.isReady = false;
     this.timerRef = undefined;
   }
 
-  public start = (strategy: FeatureToggleStrategies): Promise<void> => {
-    this._checkValidStrategy(strategy.type);
+  public start = (): Promise<void> => {
+    const { strategy } = this.opts;
 
     switch (strategy.type) {
-      case 'init':
+      case this.SUPPORTED_STRATEGY_TYPES.init:
         return this._handleStartInit();
-      case 'poll':
-        return this._handleStartPolling(strategy.pollInterval);
+      case this.SUPPORTED_STRATEGY_TYPES.poll:
+        return this._handleStartPolling();
       default:
-        throw new Error(`${strategy.type} is unknown!`);
+        throw new Error(`Strategy is recognize! Gitlab adapter only support ${Object.keys(this.SUPPORTED_STRATEGY_TYPES).join(', ')}`);
     }
   };
 
-  public stop = (strategy: FeatureToggleStrategies): Promise<void> => {
+  public stop = (): Promise<void> => {
+    const { strategy } = this.opts;
+  
     switch (strategy.type) {
       case 'init':
         return this._handleStopInit();
       case 'poll':
         return this._handleStopPolling();
       default:
-        throw new Error(`${strategy.type} is unknown!`);
+        throw new Error(`Strategy is recognize! Gitlab adapter only support ${Object.keys(this.SUPPORTED_STRATEGY_TYPES).join(', ')}`);
     }
   };
 
@@ -77,13 +87,13 @@ export default class Unleash extends TinyEmitter
     return Promise.resolve();
   };
 
-  private _handleStartPolling = (
-    pollInterval = DEFAULT_POLL_INTERVAL,
-  ): Promise<void> => {
+  private _handleStartPolling = (): Promise<void> => {
+    const strategy = this.opts.strategy as FeatureTogglePollStrategy;
+
     return new Promise(async (resolve, reject) => {
       try {
         await this._handleStopPolling();
-        const interval = pollInterval;
+        const interval = strategy.pollInterval  || DEFAULT_POLL_INTERVAL;
         await this.fetchFlags();
         this.isReady = true;
         this.emit(EVENTS.READY);

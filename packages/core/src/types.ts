@@ -14,11 +14,6 @@ export type FeatureToggleValue<T> = {
   metadata: T;
 };
 
-export type FeatureToggleStrategies =
-  | FeatureTogglePollStrategy
-  | FeatureToggleSseStrategy
-  | FeatureToggleInitStrategy;
-
 export type FeatureToggleInitStrategy = {
   type: 'init';
 };
@@ -36,8 +31,8 @@ export type FeatureToggleSseStrategy = {
 };
 
 export interface IFeatureToggleAdapterClient<T> extends TinyEmitter {
-  start: (strategy: FeatureToggleStrategies) => Promise<void>;
-  stop: (strategy: FeatureToggleStrategies) => Promise<void>;
+  start: () => Promise<void>;
+  stop: () => Promise<void>;
   ready: () => Promise<void>;
   getFlag: (flagName: string) => FeatureToggleValue<T> | undefined;
 }
@@ -53,5 +48,4 @@ export interface IFeatureToggle<T> {
 
 export interface IFeatureToggleConfig<T> {
   adapter: IFeatureToggleAdapterClient<T>;
-  strategy: FeatureToggleStrategies;
 }
