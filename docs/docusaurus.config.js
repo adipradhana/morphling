@@ -17,7 +17,7 @@ module.exports = {
       title: 'Morphling',
       logo: {
         alt: 'Morphling Logo',
-        src: 'img/logo.svg',
+        src: 'img/morphling.jpeg',
       },
       items: [
         {
