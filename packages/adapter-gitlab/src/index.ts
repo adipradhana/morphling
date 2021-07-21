@@ -119,9 +119,19 @@ export default class GitlabUnleash extends TinyEmitter
   }
 
   private _massageData = (original: Metadata): FeatureToggleValue<Metadata> => {
+    let isEnabled = original.enabled;
+
+    if (isEnabled) {
+      const rollouts = original.strategies.map(strategy => {
+        return strategy?.parameters?.rollout >= 100
+      })
+      const hasEnabledRollout = rollouts.includes(true)
+      isEnabled = hasEnabledRollout
+    }
+
     return {
+      isEnabled,
       name: original.name,
-      isEnabled: original.enabled,
       metadata: original,
     };
   };
