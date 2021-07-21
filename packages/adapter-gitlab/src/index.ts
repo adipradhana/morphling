@@ -44,7 +44,7 @@ export default class GitlabUnleash extends TinyEmitter
       case this.SUPPORTED_STRATEGY_TYPES.poll:
         return this._handleStartPolling();
       default:
-        throw new Error(`Strategy is recognize! Gitlab adapter only support ${Object.keys(this.SUPPORTED_STRATEGY_TYPES).join(', ')}`);
+        throw new Error(`Strategy is unrecognize! Gitlab adapter only support ${Object.keys(this.SUPPORTED_STRATEGY_TYPES).join(', ')}`);
     }
   };
 
@@ -56,8 +56,6 @@ export default class GitlabUnleash extends TinyEmitter
         return this._handleStopInit();
       case 'poll':
         return this._handleStopPolling();
-      default:
-        throw new Error(`Strategy is recognize! Gitlab adapter only support ${Object.keys(this.SUPPORTED_STRATEGY_TYPES).join(', ')}`);
     }
   };
 
