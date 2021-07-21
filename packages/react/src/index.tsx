@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import propTypes from 'prop-types';
 import isEqual from 'lodash/isEqual';
-import { Metadata as UnleashMetadata } from '@warungpintar/morphling-adapter-unleash';
+import { Metadata as GitlabUnleashMetadata } from '@warungpintar/morphling-adapter-gitlab';
 import { IFeatureToggle } from '@warungpintar/morphling-core';
 
 interface IFeatureFlagStatus {
@@ -25,13 +25,13 @@ export interface ProviderProps<T> {
 }
 
 const FeatureFlagContext = createContext<
-  IFeatureFlagContextValues<UnleashMetadata>
+  IFeatureFlagContextValues<GitlabUnleashMetadata>
 >({
   adapter: undefined,
   isReady: false,
 });
 
-const FeatureToggleProvider: React.FC<ProviderProps<UnleashMetadata>> = ({
+const FeatureToggleProvider: React.FC<ProviderProps<GitlabUnleashMetadata>> = ({
   children,
   adapter,
 }) => {

@@ -1,9 +1,9 @@
 import { IFeatureFlagContextValues } from './types';
 import { createContext } from 'react';
-import { Metadata as UnleashMetadata } from '@warungpintar/morphling-adapter-unleash';
+import { Metadata as GitlabUnleashMetadata } from '@warungpintar/morphling-adapter-gitlab';
 
 const FeatureFlagContext = createContext<
-  IFeatureFlagContextValues<UnleashMetadata>
+  IFeatureFlagContextValues<GitlabUnleashMetadata>
 >({
   adapter: undefined,
   isReady: false,

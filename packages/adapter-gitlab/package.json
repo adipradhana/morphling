@@ -1,7 +1,7 @@
 {
-  "name": "@warungpintar/morphling-adapter-unleash",
+  "name": "@warungpintar/morphling-adapter-gitlab",
   "version": "1.0.0",
-  "description": "Unleash feature flag service adapter",
+  "description": "Gitlab (Unleash) feature flag service adapter",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",

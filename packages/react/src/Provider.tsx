@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import propTypes from 'prop-types';
-import { Metadata as UnleashMetadata } from '@warungpintar/morphling-adapter-unleash';
+import { Metadata as GitlabUnleashMetadata } from '@warungpintar/morphling-adapter-gitlab';
 import { ProviderProps } from './types';
 import FeatureFlagContext from './Context';
 
-const FeatureToggleProvider: React.FC<ProviderProps<UnleashMetadata>> = ({
+const FeatureToggleProvider: React.FC<ProviderProps<GitlabUnleashMetadata>> = ({
   children,
   adapter,
 }) => {
