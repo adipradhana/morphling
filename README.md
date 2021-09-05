@@ -1,4 +1,6 @@
 # Morphling
+[![documentation](https://github.com/warungpintar/morphling/actions/workflows/documentation.yml/badge.svg)](https://github.com/warungpintar/morphling/actions/workflows/documentation.yml)
+
 Docs: https://warungpintar.github.io/morphling/
 
 ### GETTING STARTED
