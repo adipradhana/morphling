@@ -5,13 +5,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Morphling',
   tagline: 'Feature Toggle for all',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
+  url: 'https://warungpintar.github.io',
+  baseUrl: '/morphling/',
+  trailingSlash: false,
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'warungpintar', // Usually your GitHub org/user name.
+  projectName: 'morphling', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Morphling',
@@ -26,7 +27,7 @@ module.exports = {
           position: 'left',
           label: 'Tutorial',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/morphling/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -42,7 +43,7 @@ module.exports = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/morphling/docs/intro',
             },
           ],
         },
@@ -68,7 +69,7 @@ module.exports = {
           items: [
             {
               label: 'Blog',
-              to: '/blog',
+              to: '/morphling/blog',
             },
             {
               label: 'GitHub',
