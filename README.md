@@ -1,3 +1,6 @@
+# Morphling
+Docs: https://warungpintar.github.io/morphling/
+
 ### GETTING STARTED
 
 Feature Toggle Library is a library that helps projects implement feature toggling/flagging with ease. This library uses adapters to achieve maintainability and scalability purposes.
