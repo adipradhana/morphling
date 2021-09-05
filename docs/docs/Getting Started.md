@@ -4,8 +4,6 @@ sidebar_position: 1
 
 ## Install Dependencies
 
-before installing dependencies make sure you already setup the `~/.npmrc` or `~/.yarnrc` head to https://gitlab.warungpintar.co/warungpintar/feature-toggle/-/packages/84 for more details
-
 ```shell
 yarn add @warungpintar/morphling-core @warungpintar/morphling-unleash-adapter @warungpintar/morphling-react
 ```
